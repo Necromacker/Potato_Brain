@@ -174,7 +174,7 @@ const storeScore = async () => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/api/scores', { // Adjust if backend URL differs
+        const response = await fetch('https://trivia-4bb4.onrender.com/api/scores', { // Adjust if backend URL differs
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
