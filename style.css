@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +18,6 @@ body {
   padding: 20px;
 }
 
-/* Container for quiz and leaderboard */
 #quiz_body {
   width: 100%;
   max-width: 960px;
@@ -29,7 +27,6 @@ body {
   gap: 30px;
 }
 
-/* Quiz box */
 #quiz_box {
   background-color: rgba(115, 134, 156, 0.623);
   border-radius: 15px;
@@ -41,7 +38,6 @@ body {
   position: relative;
 }
 
-/* Question and options */
 #question {
   font-size: 1.2rem;
   color: #fff;
@@ -99,7 +95,6 @@ body {
   background-position: 100% 100%;
 }
 
-/* Score board and next button container */
 #score_board {
   background-color: #fff;
   color: #333;
@@ -175,7 +170,6 @@ body {
   transition: all 0.35s;
 }
 
-/* Container for loading bar */
 .container {
   background-color: rgba(115, 134, 156, 0.623);
   width: 100%;
@@ -185,7 +179,6 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Loading bar */
 .Loading, .notLoading {
   position: relative;
   display: inline-block;
@@ -216,7 +209,6 @@ body {
   100% { width: 100%; background: #000; }
 }
 
-/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -293,7 +285,6 @@ body {
   text-decoration: none;
 }
 
-/* Leaderboard Styles */
 #leaderboard {
   background-color: rgba(115, 134, 156, 0.623);
   padding: 20px;
@@ -318,19 +309,17 @@ body {
   padding: 0;
   max-height: 300px;
   overflow-y: auto;
-  margin: 0 auto;
   width: 90%;
-  max-width: 600px;
+  width: 100%;
   text-align: left;
 }
 
 #leaderboard-list li {
   padding: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   #quiz_body {
     max-width: 100%;

@@ -5,8 +5,6 @@ const next_btn = document.querySelector(".next_btn");
 const current_options = document.querySelectorAll(".box");
 const score_card = document.querySelector("#score_board");
 const Loader = document.querySelector(".notLoading");
-
-// Modal elements
 const modal = document.getElementById("usernameModal");
 const usernameInput = document.getElementById("usernameInput");
 const submitUsernameButton = document.getElementById("submitUsername");
@@ -19,7 +17,6 @@ let score = 0;
 let username = "";
 let timer;
 
-// Show modal for username input
 function showModal() {
     modal.style.display = "block";
 }
@@ -28,19 +25,16 @@ function hideModal() {
     modal.style.display = "none";
 }
 
-// Close modal on clicking 'x'
 closeBtn.onclick = function() {
     hideModal();
 };
 
-// Close modal if clicking outside modal content
 window.onclick = function(event) {
     if (event.target === modal) {
         hideModal();
     }
 };
 
-// Submit username and start game
 submitUsernameButton.addEventListener("click", function() {
     username = usernameInput.value.trim();
     if (username) {
@@ -161,12 +155,10 @@ current_options.forEach(option => {
         const isCorrect = option.innerText === questions[count - 1].correctAnswer;
         result(isCorrect ? "correct" : "incorrect", option);
 
-        // Disable further clicks after one selection
         current_options.forEach(opt => opt.style.pointerEvents = "none");
     });
 });
 
-// Store score in backend MongoDB
 const storeScore = async () => {
     const data = {
         username,
@@ -174,7 +166,7 @@ const storeScore = async () => {
     };
 
     try {
-        const response = await fetch('https://trivia-4bb4.onrender.com/api/scores', { // Adjust if backend URL differs
+        const response = await fetch('https://trivia-4bb4.onrender.com/api/scores', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -193,7 +185,6 @@ const storeScore = async () => {
     }
 };
 
-// Fetch leaderboard from backend
 const fetchLeaderboard = async () => {
     try {
         const response = await fetch('https://trivia-4bb4.onrender.com/api/leaderboard');
@@ -221,7 +212,6 @@ function startGame() {
     fetchLeaderboard();
 }
 
-// Show username modal on page load
 window.onload = function() {
     showModal();
 };
