@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Playwrite+FR+Trad:wght@100..400&family=Playwrite+PT:wght@100..400&family=Rampart+One&family=Righteous&family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="quiz_body">
+      <div class="container">
+        <div class="notLoading"></div>
+      </div>
+      <div id="quiz_box">
+        <div id="options">
+          <div id="question">Press "Next" to start quiz</div>
+          <div id="option_1" class="box"></div>
+          <div id="option_2" class="box"></div>
+          <div id="option_3" class="box"></div>
+          <div id="option_4" class="box"></div>
+          <div id="buttons">
+            <div id="score_board" >Score : 0</div>
+            <div class="next_btn">
+              <a href="#"><span>Next</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal -->
+      <div id="usernameModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Enter Your Username:</h2>
+          <input type="text" id="usernameInput" placeholder="Username" />
+          <button id="submitUsername">Submit</button>
+        </div>
+      </div>
+      <!-- Leaderboard Display -->
+      <div id="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+          <!-- Leaderboard data will be loaded here -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
