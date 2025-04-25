@@ -196,7 +196,7 @@ const storeScore = async () => {
 // Fetch leaderboard from backend
 const fetchLeaderboard = async () => {
     try {
-        const response = await fetch('http://localhost:3000/api/leaderboard'); // Adjust if backend URL differs
+        const response = await fetch('https://trivia-4bb4.onrender.com'); // Adjust if backend URL differs
         const leaderboardData = await response.json();
 
         leaderboardData.sort((a, b) => b.score - a.score);
